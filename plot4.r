@@ -24,4 +24,6 @@ legend("topright", pch=c(NA, NA, NA), col=c("black", "red", "blue"), legend=c("S
 
 plot(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime")
 
+dev.copy(png, file="plot4.png")
+
 dev.off()
