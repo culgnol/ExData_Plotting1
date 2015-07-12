@@ -15,6 +15,7 @@ with(DT, lines(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Sub_mete
 with(DT, lines(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Sub_metering_3, col="blue"))
 
 legend("topright", pch=c(NA, NA, NA), col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1,1,1))
-dev.copy(png, file="plot4.png")
+
+dev.copy(png, file="plot3.png")
 
 dev.off()
