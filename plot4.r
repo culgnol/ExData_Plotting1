@@ -8,7 +8,7 @@ DT[,1] <- as.Date(as.character(DT[,1]), format="%d/%m/%Y")
 
 
 #plot4
-png(filename="plot4.png")
+png(filename="plot4.png", width = 480, height = 480)
 
 par(mfrow=c(2,2))
 

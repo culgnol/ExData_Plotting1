@@ -8,7 +8,7 @@ DT[,1] <- as.Date(as.character(DT[,1]), format="%d/%m/%Y")
 
 
 #plot3
-png(filename="plot3.png")
+png(filename="plot3.png", width = 480, height = 480)
 
 with(DT, plot(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Sub_metering_1, type="l", ylab="Energy sub metering", xlab=""))
 

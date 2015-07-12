@@ -8,8 +8,8 @@ DT[,1] <- as.Date(as.character(DT[,1]), format="%d/%m/%Y")
 
 
 #plot1
-png(filename="plot1.png")
+png(filename="plot1.png", width = 480, height = 480)
 
 hist(DT$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red")
-
+?
 dev.off()
