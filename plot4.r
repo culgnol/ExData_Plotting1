@@ -8,6 +8,8 @@ DT[,1] <- as.Date(as.character(DT[,1]), format="%d/%m/%Y")
 
 
 #plot4
+png(filename="plot4.png")
+
 par(mfrow=c(2,2))
 
 plot(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Global_active_power, type="l", ylab="Global Active Power", xlab="")
@@ -23,7 +25,5 @@ with(DT, lines(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Sub_mete
 legend("topright", pch=c(NA, NA, NA), col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1,1,1))
 
 plot(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime")
-
-dev.copy(png, file="plot4.png")
 
 dev.off()

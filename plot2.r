@@ -7,8 +7,8 @@ DT <- read.table("household_power_consumption.txt", sep=";", na.strings="?", col
 DT[,1] <- as.Date(as.character(DT[,1]), format="%d/%m/%Y")
 
 #plot2
-plot(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+png(filename="plot2.png")
 
-dev.copy(png, file="plot2.png")
+plot(strptime(paste(DT[,1], DT[,2]), "%Y-%m-%d %H:%M:%S"), DT$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
 dev.off()
