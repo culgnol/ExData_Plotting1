@@ -1,3 +1,4 @@
+#Plot 4 - Global Active Power
 fileRead <- readLines("household_power_consumption.txt")
 extractedReads <- grep("^1/2/2007|^2/2/2007", fileRead)
 headerCols<-unlist(strsplit(fileRead[1], ";"))
@@ -6,8 +7,6 @@ DT <- read.table("household_power_consumption.txt", sep=";", na.strings="?", col
 
 DT[,1] <- as.Date(as.character(DT[,1]), format="%d/%m/%Y")
 
-
-#plot4
 png(filename="plot4.png", width = 480, height = 480)
 
 par(mfrow=c(2,2))
